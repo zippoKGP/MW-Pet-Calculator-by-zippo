@@ -366,6 +366,112 @@
         .btn-minus:active {
             background-image: url("data:image/png;base64,UklGRqIDAABXRUJQVlA4WAoAAAAwAAAAFAAAFAAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZBTFBIaAAAAAFwGNu26cTov5rUYNs2v4I7O3qYVBARE5DMYN6OVRh7xmQZYL6EwIIHF9VD5WhpOnBUPURnrxDhYUXQOCp0HTj/0dHOBRAREwcReWDiIYK2fAWYO7C3U7PwoMPWc6Y13caedrqNeTEFVlA4IEQBAADwBgCdASoVABUAPlEgjUSjoiEUBqg4BQS0AE6ZQkFkQVuu2CqAGPmwoKWcDOpyjZdEgFV4VcyXfsT0CMhyuaQAAP71oz9e/Q7U6cX1XfTz2so964NjeNubz0wpStQyTe5EpGqNqWx1O/6yHGs6y2jXh/ZCk6b/fcva3PGbzv/2SCz0neT/G/L/FJTXPxQLVH9uPgmBSQtBnZPl+HXe+ro5OJc+t/9Ntm1nZVjQCz2eEnAqUTh867NukVDbvcnx3av3/SS6/8FsyFxz85e/wvyS7me78Dl1kIWljk12/5LfvuF349U9fq8HHFgzWuSo+5kyX/+s/qD314u5Ec8w/KOMVr3zWbTPAgnVkFRKr9cFT2kPP9wgoTC2fXlCrx3Vd7anVzI8YicoFlE9TUOuDO4MXdvD1fAasuuS1Dr6Afv0fbTgAAA=");
         }
+
+        /* Info buttons - Resistance and Skills */
+        .info-btn {
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .info-btn:hover {
+            opacity: 0.8;
+        }
+
+        .btn-resist {
+            right: 130px;  /* Moved left 50px from 26px */
+            top: 255px;
+            background-image: url("data:image/png;base64,UklGRsYEAABXRUJQVlA4WAoAAAAgAAAAGQAAGQAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDgg2AIAAPAPAJ0BKhoAGgA+TR6LRCKhoRv6rAAoBMS2AE6ZQj2sVfq42GdmDV7YC7L/QA/QD0vvZIrJvQdd8j0H6x+U8+Q/ZLeAeUZ5JPDD/4H2gfEp/jeUH5j/2nuDfxr+d/5f+w/u93Vf2A9h79mQ1j71ZowWoL2bMAqkCJXOFXOk8pP1E9SnRffRaAAA/vfIfNgFFp+7ZKsIG4fblKyb+fmKYtu6XU/gn+OZIf0YWz7VxDrOb/1iQfehkGtDeSNp0X6t4Of+rn56WcDeTSw/J33scPpiKq+zSKOICkBfZfXXDfiOSEWyGXmZPdt9XbNkh4pqX938huWoVaTpzFWc3Ht9G4SgXwzs5XcwMKVHgvv9dJdBA0WQFmxXz2r+0guQvA9w56E/p/sbLUgIGPfz84n/7jVSRNfEfO01kXcp7gQp5l+p0cZCQkm7FfZ9ftEwEJkLa92aMOiljesTfXQWj/66+vWHX1bUfAO1hXwCaB85W98evZ0Zppf9wekq93E0noXG+eZP+QABufZVoxpUt24JW3j9XEHGCoi36us7/Lvkso9e5GrFyGu/AkEZIMeTQfMavDRG9pQufgmtV/P/LRt69QloeU2V+ayKwbmDU3aMYo3Vg2cVwmk87UDV0tanho0CbG08HDYvWrYMLB+prn1zgroBcHzPWIo9a9+Inc4P2YQeGc9xrd/jsKj4mG+oZs/4MWGQCezrPVfl+HLhmlb/jNHP8yt0yT0CNvj0GuuouYl+jq+Df6sO3bxX95PmiDJ6mAj7xyV6MxJ339KZQ3zuolnNy/HzEH95mgZZwhSF/CqUAwpqve4/lDevICg/V+pz6sPWeywbfqyDzDIEO/+jz85l7cTD7jzg9U7T937Pa9FAFRHxTuOy69yaOmN61hENG9JzbtXt1Ur656CyQE18kfjPa6//+4MyNYyxXiE0vNAQ2Zjh7OobNQw7HTkDcp+9Nu8pvI2WZAAA");
+        }
+
+        .btn-skill {
+            right: 86px;  /* Moved left 50px from -4px */
+            top: 255px;
+            background-image: url("data:image/png;base64,UklGRqwEAABXRUJQVlA4WAoAAAAwAAAAGQAAGQAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZBTFBIEwAAAAEPcP//iIggJEjw/3Z7RP8jPAAAVlA4IKICAACQDgCdASoaABoAPlEgjEQjoiEYBAA4BQS2AE6ZQjqD13ihdkmwzuoYDbX3Y76AH7AdZ1+4npR0vV8B+OGUL+izULQQOMG7V843nI/6v9e86H0n7AH6mf7nrtfrp7In6ujijIIEiubWlg+ybnN/JrU0H9lotxsEYZYYRA0UQAD+99BVmyLl/tfyW3xqHdt7E/PHZ+G/tT4cW5Sm6GhLuVGT0OOc3caTXfXQpnK5h3NR7I0WmhMvte1AvDhsqurO40kDjdhCKbNvv9wuK/u9Z/l/m09nRdu4+zF1eo0f4rRl0H36g+I2xFfrn8mdERBtzGxrSR+QrTDmbUDZlFw3A+tnqD63r+Sy2Ss99yth7srKynkVm/yBkEzDFya3xD/7r2ppDkEQ8yswnf657Uc8WQrLhKByEw+QkP9XOCHHJwIXerEAHVW2mBvPPWV6xvCxUhxDPta6efM4OSeaiz1qzlfaczx25NYK5J5f9keuOT4/c01RFIdcV24Iu2nRmhhzULkVvzH7V6zFdD+YDzp3DoRzpt9MfeIQlRbz8UdYvrrxPPt1DW9vp0XaBdKhq/y5ezx9KDbi0Bbgo7TnsOvceEnPJF5TNZTJ3XD3+rPAOcX6oZ4vGrdawa5OGEwGQxFf7t1fk21XH/QW/45bx0p/orF+/89hzrPocbFx96Ka1//O+EF6a3LF/eR2So5btWfmMiqTT0QAsGyZ0NTx5mz1mDT2AZfrkGm9Gr0izyMVUEbBY8vr5/1vlMV9QvnQ5DL0dU3XmzdKtk1IbPFVh0lxKntNHw1Ki+EDdPTRz4MLx7FyJd+rf2c6QSuf/mtZn+ZL/3b7vBCoD6HzVuHxfRnltjXn7YPWMWR7TlmQKf26foZaZFtVR7w/spckQTViXHJSHwAAAA==");
+        }
+
+        /* Modal popup */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
+            margin: 10% auto;
+            padding: 20px;
+            border: 3px solid #FFD700;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            color: #FFD700;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            color: #FFD700;
+            font-size: 20px;
+        }
+
+        .modal-close {
+            color: #FFD700;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        .modal-close:hover {
+            color: #FFF;
+        }
+
+        .modal-body {
+            line-height: 1.8;
+        }
+
+        .modal-body div {
+            padding: 5px 0;
+            color: #FFF;
+        }
+
+        .skill-item {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border-left: 3px solid #FFD700;
+        }
+
+        .resist-item {
+            background: rgba(50, 205, 50, 0.1);
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border-left: 3px solid #32CD32;
+        }
     </style>
 </head>
 <body>
@@ -374,9 +480,20 @@
         <p style="color: #ffa500; font-size: 14px;">Enter stats exactly as shown in game</p>
     </div>
 
-    <button class="add-pet-btn" onclick="addPet()">➕ Add Pet</button>
+    <button class="add-pet-btn" onclick="addPet()">+ Add Pet</button>
 
     <div class="pets-container" id="petsContainer"></div>
+
+    <!-- Modal for displaying skills/resistance -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
 
     <script>
         const defaultPetImages = {
@@ -448,6 +565,7 @@
             "Lizard Man": "https://mythwar.luigi311.com/latest/assets/monsters/lizard_man.gif",
             "Lizard Miner": "https://mythwar.luigi311.com/latest/assets/monsters/lizard_miner.gif",
             "Lycosa": "https://mythwar.luigi311.com/latest/assets/monsters/lycosa.gif",
+            "Mad Colossus": "",
             "Mad Ogrewalker": "https://mythwar.luigi311.com/latest/assets/monsters/mad_ogrewalker.gif",
             "Mosquito": "https://mythwar.luigi311.com/latest/assets/monsters/mosquito.gif",
             "Mudraper": "https://mythwar.luigi311.com/latest/assets/monsters/mudraper.gif",
@@ -459,6 +577,7 @@
             "Pisces": "https://mythwar.luigi311.com/latest/assets/monsters/pisces.gif",
             "River Beast": "https://mythwar.luigi311.com/latest/assets/monsters/river_beast.gif",
             "River Guardian": "https://mythwar.luigi311.com/latest/assets/monsters/river_guardian.gif",
+            "Sand Colossus": "",
             "Sand Giant": "https://mythwar.luigi311.com/latest/assets/monsters/sand_giant.gif",
             "Santa Claus": "https://mythwar.luigi311.com/latest/assets/monsters/santa_claus.gif",
             "Santa Princess": "https://mythwar.luigi311.com/latest/assets/monsters/santa_princess.gif",
@@ -496,7 +615,8 @@
   "Chaos Devil": "Demon",
   "Chaos Wisp": "Special",
   "Chaotic Devil": "Demon",
-  "Chinchilla": "Dragon",
+  "Chinchilla Fire": "Dragon",
+  "Chinchilla Water": "Dragon",
   "Crazy Bandit": "Human",
   "Cyclops": "Human",
   "Dark Dream": "Flying",
@@ -516,6 +636,11 @@
   "Feral Wolf": "Special",
   "Fire Demon": "Flying",
   "Flame Phoenix": "Demon",
+  "Flurry Crazy Bandit": "Human",
+  "Flurry Flyer": "Flying",
+  "Flurry Ghost Warrior": "Demon",
+  "Flurry Guard": "Undead",
+  "Flurry Werewolf": "Human",
   "Flyer": "Flying",
   "Fog Spirit": "Undead",
   "Ghastly Dragon": "Dragon",
@@ -542,6 +667,7 @@
   "Lizard Man": "Human",
   "Lizard Miner": "Human",
   "Lycosa": "Special",
+  "Mad Colossus": "Human",
   "Mad Ogrewalker": "Human",
   "Mosquito": "Flying",
   "Mudraper": "Demon",
@@ -553,6 +679,7 @@
   "Pisces": "Special",
   "River Beast": "Flying",
   "River Guardian": "Flying",
+  "Sand Colossus": "Human",
   "Sand Giant": "Human",
   "Santa Claus": "Human",
   "Santa Princess": "Human",
@@ -591,7 +718,8 @@
     { name: 'Chaos Devil', sta: 176, int: 449, str: 23, agi: 11, grMin: 1.3, grMax: 1.3 },
     { name: 'Chaos Wisp', sta: 145, int: 633, str: 22, agi: 42, grMin: 1.6, grMax: 1.6 },
     { name: 'Chaotic Devil', sta: 275, int: 286, str: 44, agi: 11, grMin: 1.3, grMax: 1.3 },
-    { name: 'Chinchilla', sta: 330, int: 120, str: 34, agi: 66, grMin: 1.258, grMax: 1.29 },
+    { name: 'Chinchilla Fire', sta: 330, int: 120, str: 34, agi: 66, grMin: 1.258, grMax: 1.29 },
+    { name: 'Chinchilla Water', sta: 330, int: 120, str: 34, agi: 66, grMin: 1.258, grMax: 1.29 },
     { name: 'Crazy Bandit', sta: 101, int: 117, str: 19, agi: 73, grMin: 1.131, grMax: 1.161 },
     { name: 'Cyclops', sta: 137, int: 98, str: 81, agi: 26, grMin: 1.158, grMax: 1.188 },
     { name: 'Dark Dream', sta: 113, int: 81, str: 45, agi: 402, grMin: 1.6, grMax: 1.6 },
@@ -611,6 +739,11 @@
     { name: 'Feral Wolf', sta: 156, int: 66, str: 81, agi: 149, grMin: 1.169, grMax: 1.199 },
     { name: 'Fire Demon', sta: 102, int: 368, str: 28, agi: 78, grMin: 1.188, grMax: 1.218 },
     { name: 'Flame Phoenix', sta: 252, int: 109, str: 34, agi: 611, grMin: 1.8, grMax: 1.8 },
+    { name: 'Flurry Crazy Bandit', sta: 101, int: 117, str: 19, agi: 73, grMin: 1.3, grMax: 1.3 },
+    { name: 'Flurry Flyer', sta: 90, int: 99, str: 17, agi: 256, grMin: 1.3, grMax: 1.3 },
+    { name: 'Flurry Ghost Warrior', sta: 93, int: 43, str: 115, agi: 55, grMin: 1.3, grMax: 1.3 },
+    { name: 'Flurry Guard', sta: 115, int: 128, str: 19, agi: 65, grMin: 1.3, grMax: 1.3 },
+    { name: 'Flurry Werewolf', sta: 105, int: 54, str: 26, agi: 75, grMin: 1.3, grMax: 1.3 },
     { name: 'Flyer', sta: 90, int: 99, str: 17, agi: 256, grMin: 1.123, grMax: 1.153 },
     { name: 'Fog Spirit', sta: 86, int: 399, str: 16, agi: 152, grMin: 1.155, grMax: 1.185 },
     { name: 'Ghastly Dragon', sta: 130, int: 449, str: 28, agi: 41, grMin: 1.3, grMax: 1.3 },
@@ -637,6 +770,7 @@
     { name: 'Lizard Man', sta: 88, int: 112, str: 18, agi: 62, grMin: 1.134, grMax: 1.164 },
     { name: 'Lizard Miner', sta: 85, int: 53, str: 18, agi: 80, grMin: 1.132, grMax: 1.162 },
     { name: 'Lycosa', sta: 88, int: 192, str: 22, agi: 124, grMin: 1.162, grMax: 1.19 },
+    { name: 'Mad Colossus', sta: 288, int: 186, str: 39, agi: 1, grMin: 1.25, grMax: 1.3 },
     { name: 'Mad Ogrewalker', sta: 123, int: 48, str: 92, agi: 72, grMin: 1.164, grMax: 1.194 },
     { name: 'Mosquito', sta: 87, int: 61, str: 17, agi: 292, grMin: 1.205, grMax: 1.205 },
     { name: 'Mudraper', sta: 158, int: 212, str: 19, agi: 39, grMin: 1.142, grMax: 1.173 },
@@ -648,6 +782,7 @@
     { name: 'Pisces', sta: 83, int: 456, str: 19, agi: 197, grMin: 1.25, grMax: 1.25 },
     { name: 'River Beast', sta: 95, int: 48, str: 120, agi: 51, grMin: 1.25, grMax: 1.3 },
     { name: 'River Guardian', sta: 104, int: 177, str: 76, agi: 129, grMin: 1.205, grMax: 1.225 },
+    { name: 'Sand Colossus', sta: 288, int: 156, str: 39, agi: 1, grMin: 1.25, grMax: 1.3 },
     { name: 'Sand Giant', sta: 288, int: 156, str: 39, agi: 1, grMin: 1.3, grMax: 1.3 },
     { name: 'Santa Claus', sta: 181, int: 167, str: 18, agi: 53, grMin: 1.3, grMax: 1.4 },
     { name: 'Santa Princess', sta: 105, int: 90, str: 23, agi: 212, grMin: 1.3, grMax: 1.4 },
@@ -668,6 +803,214 @@
     { name: 'Wicked Spirit', sta: 130, int: 649, str: 23, agi: 41, grMin: 1.3, grMax: 1.3 },
     { name: 'Withered Guard', sta: 85, int: 110, str: 18, agi: 54, grMin: 1.122, grMax: 1.152 }
 ];
+
+        // Pet Skills Data
+        const petSkills = {
+            'Ant Eater': ['Frailty I', 'Frailty II', 'Frailty III', 'Frailty IV'],
+            'Aquarius': ['Ice I', 'Ice II', 'Ice III', 'Ice IV'],
+            'Aurora Lion': ['Multi Shot I', 'Multi Shot II', 'Multi Shot III', 'Multi Shot IV'],
+            'Axewalker': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Bee': ['Protect I', 'Protect II', 'Protect III', 'Protect IV'],
+            'Berserker': ['Speed I', 'Speed II', 'Enhance III', 'Enhance IV'],
+            'Big Crab': ['Protect I', 'Protect II', 'Protect III', 'Protect IV'],
+            'Big Foot': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Bloodpede': ['Poison I', 'Poison II', 'Poison III', 'Poison IV'],
+            'Bog Nightmare': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Capilla': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Capricornus': ['Fire I', 'Fire II', 'Fire III', 'Fire IV'],
+            'Centaur King': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Chaos Devil': ['Fire I', 'Ice II', 'Evil III', 'Flash IV'],
+            'Chaos Wisp': ['Ice II', 'Evil II', 'Ice IV', 'Flash IV'],
+            'Chaotic Devil': ['Blizzard I', 'Speed II', 'Blizzard III', 'Speed IV'],
+            'Chinchilla Fire': ['Fire I', 'Fire II', 'Fire III', 'Fire IV'],
+            'Chinchilla Water': ['Ice I', 'Ice II', 'Ice III', 'Ice IV'],
+            'Crazy Bandit': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Cyclops': ['Enhance I', 'Enhance II', 'Enhance III', 'Enhance IV'],
+            'Dark Dream': ['Poison I', 'Poison II', 'Poison III', 'Poison IV'],
+            'Dark Giant': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Demon Dragon': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Demon Punisher': ['Death I', 'Death II', 'Evil III', 'Evil IV'],
+            'Desert Bandit': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Dream Dragon': ['Enhance I', 'Enhance II', 'Enhance III', 'Enhance IV'],
+            'Dream Flyer': ['Protect I', 'Protect II', 'Protect III', 'Protect IV'],
+            'Earth Wolf': ['Flash I', 'Flash II', 'Flash III', 'Flash IV'],
+            'Evil Fire Demon': ['Fire I', 'Fire II', 'Fire III', 'Fire IV'],
+            'Evil Mudraper': ['Ice I', 'Ice II', 'Ice III', 'Ice IV'],
+            'Evil Skeletal': ['Enhance I', 'Enhance II', 'Enhance III', 'Enhance IV'],
+            'Evil Wolf': ['Enhance I', 'Enhance II', 'Enhance III', 'Enhance IV'],
+            'Eyekicker': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Felsworn': ['Speed I', 'Speed II', 'Speed III', 'Speed IV'],
+            'Feral Wolf': ['Enhance I', 'Enhance II', 'Enhance III', 'Enhance IV'],
+            'Fire Demon': ['Fire I', 'Fire II', 'Fire III', 'Fire IV'],
+            'Flame Phoenix': ['Fire I', 'Fire II', 'Fire III', 'Fire IV'],
+            'Flurry Crazy Bandit': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Flurry Flyer': ['Speed I', 'Speed II', 'Speed III', 'Speed IV'],
+            'Flurry Ghost Warrior': ['Enhance I', 'Enhance II', 'Enhance III', 'Enhance IV'],
+            'Flurry Guard': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Flurry Werewolf': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Flyer': ['Speed I', 'Speed II', 'Speed III', 'Speed IV'],
+            'Fog Spirit': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Ghastly Dragon': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Ghost Warrior': ['Enhance I', 'Enhance II', 'Enhance III', 'Enhance IV'],
+            'Ghoul': ['Fire I', 'Fire II', 'Fire III', 'Fire IV'],
+            'Ghoulspirit': ['Protect I', 'Protect III', 'Protect III', 'Protect IV'],
+            'Giantslicer': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Glimmer Fish': ['Frailty I', 'Frailty II', 'Frailty III', 'Frailty IV'],
+            'Glitter Tiger': ['Enhance I', 'Enhance II', 'Enhance III', 'Enhance IV'],
+            'Greater Wolf': ['Enhance I', 'Enhance II', 'Enhance III', 'Enhance IV'],
+            'Guard': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Hell Cat': ['Speed I', 'Speed II', 'Speed III', 'Speed IV'],
+            'Hell Devil': ['Fire I', 'Fire II', 'Fire III', 'Fire IV'],
+            'Hell Gardener': ['Speed I', 'Speed II', 'Enhance I', 'Enhance II'],
+            'Hell Phoenix': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Hell Protector': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Holy Dragon': ['Protect I', 'Protect II', 'Protect III', 'Protect IV'],
+            'Howling Beast': ['Speed I', 'Speed II', 'Enhance I', 'Enhance II'],
+            'Ice Demon': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Iron Fang': ['Drain I', 'Drain II', 'Drain III', 'Drain IV'],
+            'Killer Bee': ['Protect I', 'Protect II', 'Protect III', 'Protect IV'],
+            'Leopard Wolf': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Lizard Bandit': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Lizard Man': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Lizard Miner': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Lycosa': ['Poison I', 'Poison II', 'Poison III', 'Poison IV'],
+            'Mad Colossus': ['Repel I', 'Repel II', 'Reflect I', 'Reflect II'],
+            'Mad Ogrewalker': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Mosquito': ['Poison I', 'Poison II', 'Poison III', 'Poison IV'],
+            'Mudraper': ['Ice I', 'Ice II', 'Ice III', 'Ice IV'],
+            'Mummy': ['Protect I', 'Protect II', 'Protect III', 'Protect IV'],
+            'Nepenthes': ['Poison I', 'Frailty II', 'Poison III', 'Frailty IV'],
+            'Ocean Loong': ['Flash I', 'Flash II', 'Flash III', 'Flash IV'],
+            'Ogrewalker': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Phoenix': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Pisces': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'River Beast': ['Enhance I', 'Enhance II', 'Enhance III', 'Enhance IV'],
+            'River Guardian': ['Enhance I', 'Enhance II', 'Enhance III', 'Enhance IV'],
+            'Sand Colossus': ['Protect I', 'Protect II', 'Protect III', 'Protect IV'],
+            'Sand Giant': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Santa Claus': ['Heal Other I', 'Heal Other II', 'Heal Other III', 'Heal Other IV'],
+            'Santa Princess': ['Stun I', 'Stun II', 'UnStun III', 'UnStun IV'],
+            'Scarecrow': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Skeletal': ['Enhance I', 'Enhance II', 'Enhance III', 'Enhance IV'],
+            'Snake Demon': ['Flash I', 'Flash II', 'Flash III', 'Flash IV'],
+            'Snow Bear': ['Chaos I', 'Chaos II', 'Purge Chaos III', 'Purge Chaos IV'],
+            'Snow Wolf': ['Blizzard I', 'Blizzard II', 'Blizzard III', 'Blizzard IV'],
+            'Snowie': ['Hypnotize I', 'Hypnotize II', 'Poison III', 'Poison IV'],
+            'Spirit Cat': ['Poison I', 'Poison II', 'Poison III', 'Poison IV'],
+            'Stone Ghost': ['Speed I', 'Speed II', 'Speed III', 'Speed IV'],
+            'Stone Giant': ['Enhance I', 'Enhance II', 'Enhance III', 'Enhance IV'],
+            'Stone Tortoise': ['Ice I', 'Ice II', 'Ice III', 'Ice IV'],
+            'Teethor': ['Ice I', 'Ice II', 'Ice III', 'Ice IV'],
+            'Thorn Spider': ['Frailty I', 'Frailty II', 'Frailty III', 'Frailty IV'],
+            'Tree Demon': ['Flash I', 'Flash II', 'Flash III', 'Flash IV'],
+            'Werewolf': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Wicked Spirit': ['Evil I', 'Evil II', 'Evil III', 'Evil IV'],
+            'Withered Guard': ['Evil I', 'Evil II', 'Evil III', 'Evil IV']
+        };
+
+        // Pet Resistance Data
+        const petResist = {
+            'Ant Eater': { dodgeRate: 5, meleeResist: 30, deathResist: 20 },
+            'Aquarius': { dodgeRate: 10, pierce: 5, pierceDamage: 5, criticalRate: 5, criticalDamage: 10, comboRate: 10, comboHit: 2, drainResist: 10, stunResist: 30, hypnotizeResist: 10 },
+            'Aurora Lion': { dodgeRate: 5, meleeResist: 32, deathResist: 32 },
+            'Axewalker': { dodgeRate: 5, meleeResist: 18, deathResist: 3, evilResist: 3, flashResist: 3, iceResist: 3, fireResist: 3, drainResist: 3, poisonResist: 3, chaosResist: 3, stunResist: 3, hypnotizeResist: 3, frailtyResist: 3 },
+            'Bee': { dodgeRate: 5, meleeResist: 21, drainResist: 10, deathResist: 10, frailtyResist: 10 },
+            'Berserker': { hitRate: 160, dodgeRate: 5, meleeResist: 30, chaosResist: 30 },
+            'Big Crab': { dodgeRate: 5, meleeResist: 14, evilResist: 5, flashResist: 5, iceResist: 5, fireResist: 5, drainResist: 5, chaosResist: 5, stunResist: 5, hypnotizeResist: 5, frailtyResist: 5 },
+            'Big Foot': { dodgeRate: 5, meleeResist: 32, drainResist: 12, deathResist: 12 },
+            'Bloodpede': { dodgeRate: 5, meleeResist: 12, poisonResist: 35, frailtyResist: 20 },
+            'Bog Nightmare': { dodgeRate: 5, meleeResist: 6, evilResist: 6, flashResist: 6, iceResist: 6, fireResist: 6, drainResist: 6, chaosResist: 6, stunResist: 6, hypnotizeResist: 6, frailtyResist: 6, poisonResist: 6, deathResist: 6 },
+            'Capilla': { dodgeRate: 5, meleeResist: 9, chaosResist: 12, stunResist: 12, hypnotizeResist: 12, frailtyResist: 12 },
+            'Capricornus': { dodgeRate: 10, meleeResist: 20, pierce: 5, pierceDamage: 5, berserkRate: 10, berserkDamage: 10, counterAttackRate: 15, counterAttackDamage: 5, drainResist: 10, chaosResist: 20 },
+            'Centaur King': { dodgeRate: 5, meleeResist: 15, flashResist: 15, iceResist: 15, fireResist: 15 },
+            'Chaos Devil': { dodgeRate: 5, meleeResist: 5, evilResist: 35, flashResist: 35, iceResist: 35, fireResist: 35, drainResist: 5, deathResist: 5, poisonResist: 5, chaosResist: 5, stunResist: 5, hypnotizeResist: 5, frailtyResist: 5 },
+            'Chaos Wisp': { dodgeRate: 5, evilResist: 20, flashResist: 20, iceResist: 20, fireResist: 20 },
+            'Chaotic Devil': { dodgeRate: 5, meleeResist: 35, evilResist: 5, flashResist: 5, iceResist: 5, fireResist: 5, drainResist: 5, deathResist: 5, poisonResist: 5, chaosResist: 5, stunResist: 5, hypnotizeResist: 5, frailtyResist: 5 },
+            'Chinchilla Fire': { dodgeRate: 15, meleeResist: 10, drainResist: 15, chaosResist: 30, stunResist: 10 },
+            'Chinchilla Water': { dodgeRate: 15, meleeResist: 10, drainResist: 15, chaosResist: 10, stunResist: 30 },
+            'Crazy Bandit': { dodgeRate: 5, meleeResist: 17, drainResist: 13, poisonResist: 13, fireResist: 13 },
+            'Cyclops': { dodgeRate: 5, meleeResist: 25, chaosResist: 25 },
+            'Dark Dream': { hitRate: 120, dodgeRate: 40, meleeResist: 30 },
+            'Dark Giant': { dodgeRate: 5, meleeResist: 32, drainResist: 12, deathResist: 12 },
+            'Demon Dragon': { dodgeRate: 5, meleeResist: 40, stunResist: 40 },
+            'Demon Punisher': { dodgeRate: 5, meleeResist: 14, evilResist: 12, flashResist: 12, iceResist: 12, fireResist: 12 },
+            'Desert Bandit': { dodgeRate: 5, meleeResist: 12, drainResist: 12, deathResist: 12, hypnotizeResist: 12 },
+            'Dream Dragon': { hitRate: 110, meleeResist: 30, berserkRate: 10, berserkDamage: 10, meleeReflect: 15, meleeReflectDamage: 15, chaosResist: 30, hypnotizeResist: 20 },
+            'Dream Flyer': { dodgeRate: 25, meleeResist: 15, criticalRate: 15, criticalDamage: 10, comboRate: 5, comboHit: 3, drainResist: 15, chaosResist: 15, stunResist: 15, hypnotizeResist: 15 },
+            'Earth Wolf': { dodgeRate: 5, meleeResist: 20, drainResist: 19, stunResist: 19 },
+            'Evil Fire Demon': { dodgeRate: 5, meleeResist: 10, evilResist: 12, flashResist: 12, fireResist: 20 },
+            'Evil Mudraper': { dodgeRate: 5, meleeResist: 10, deathResist: 15, chaosResist: 11, stunResist: 11, hypnotizeResist: 11 },
+            'Evil Skeletal': { dodgeRate: 5, meleeResist: 12, evilResist: 15, iceResist: 15, fireResist: 15, deathResist: 9 },
+            'Evil Wolf': { dodgeRate: 5, meleeResist: 28, chaosResist: 10, stunResist: 10, hypnotizeResist: 10 },
+            'Eyekicker': { dodgeRate: 5, meleeResist: 22, deathResist: 14, poisonResist: 14 },
+            'Felsworn': { dodgeRate: 5, meleeResist: 7, evilResist: 7, flashResist: 7, iceResist: 7, fireResist: 7, deathResist: 7, drainResist: 7, poisonResist: 7, chaosResist: 7, stunResist: 7, hypnotizeResist: 7, frailtyResist: 7 },
+            'Feral Wolf': { dodgeRate: 5, meleeResist: 28, chaosResist: 10, stunResist: 10, hypnotizeResist: 10 },
+            'Fire Demon': { dodgeRate: 5, meleeResist: 10, evilResist: 12, flashResist: 12, fireResist: 20 },
+            'Flame Phoenix': { dodgeRate: 5, meleeResist: 20 },
+            'Flurry Crazy Bandit': { dodgeRate: 5, meleeResist: 17, drainResist: 13, poisonResist: 13, fireResist: 13 },
+            'Flurry Flyer': { dodgeRate: 5, meleeResist: 12, evilResist: 15, iceResist: 15, drainResist: 12 },
+            'Flurry Ghost Warrior': { dodgeRate: 5, meleeResist: 25, drainResist: 5, deathResist: 5, frailtyResist: 5 },
+            'Flurry Guard': { dodgeRate: 5, meleeResist: 18, evilResist: 3, flashResist: 3, iceResist: 3, fireResist: 3, deathResist: 3, poisonResist: 3, chaosResist: 3, stunResist: 3, hypnotizeResist: 3, frailtyResist: 3, drainResist: 3 },
+            'Flurry Werewolf': { dodgeRate: 5, meleeResist: 15, drainResist: 7, poisonResist: 7, chaosResist: 7, stunResist: 7, hypnotizeResist: 7, frailtyResist: 7 },
+            'Flyer': { dodgeRate: 5, meleeResist: 12, evilResist: 15, iceResist: 15, drainResist: 12 },
+            'Fog Spirit': { dodgeRate: 5, meleeResist: 20, evilResist: 15, iceResist: 15, fireResist: 15, deathResist: 15 },
+            'Ghastly Dragon': { dodgeRate: 5, meleeResist: 20, evilResist: 20, flashResist: 20, iceResist: 20, fireResist: 20 },
+            'Ghost Warrior': { dodgeRate: 5, meleeResist: 25, drainResist: 5, deathResist: 5, frailtyResist: 5 },
+            'Ghoul': { dodgeRate: 5, meleeResist: 7, drainResist: 20, chaosResist: 20 },
+            'Ghoulspirit': { dodgeRate: 5, meleeResist: 20, evilResist: 7, flashResist: 7, iceResist: 7, fireResist: 7, frailtyResist: 10 },
+            'Giantslicer': { dodgeRate: 5, meleeResist: 12, evilResist: 15, flashResist: 4, iceResist: 4, fireResist: 4, poisonResist: 3, chaosResist: 3, stunResist: 3, hypnotizeResist: 3, frailtyResist: 3, drainResist: 3 },
+            'Glimmer Fish': { dodgeRate: 5, meleeResist: 10, evilResist: 12, flashResist: 12, iceResist: 12, fireResist: 12 },
+            'Glitter Tiger': { hitRate: 140, dodgeRate: 20, berserkRate: 10, berserkDamage: 10, comboRate: 10, comboHit: 3, counterAttackDamage: 10, counterAttackRate: 10 },
+            'Greater Wolf': { dodgeRate: 5, meleeResist: 20, comboRate: 7, comboHit: 3, pierce: 20, pierceDamage: 20 },
+            'Guard': { dodgeRate: 5, meleeResist: 18, evilResist: 3, flashResist: 3, iceResist: 3, fireResist: 3, deathResist: 3, poisonResist: 3, chaosResist: 3, stunResist: 3, hypnotizeResist: 3, frailtyResist: 3, drainResist: 3 },
+            'Hell Cat': { dodgeRate: 5, meleeResist: 18, chaosResist: 35 },
+            'Hell Devil': { dodgeRate: 5, evilResist: 15, iceResist: 35, drainResist: 22 },
+            'Hell Gardener': { hitRate: 120, dodgeRate: 10, meleeResist: 25, berserkRate: 5, berserkDamage: 10, comboRate: 5, comboHit: 2, counterAttackRate: 5, counterAttackDamage: 10, evilResist: 8, flashResist: 8, iceResist: 8, fireResist: 8, deathResist: 8, drainResist: 8, poisonResist: 5, chaosResist: 5, stunResist: 5, hypnotizeResist: 5, frailtyResist: 5 },
+            'Hell Phoenix': { dodgeRate: 5, meleeResist: 12, fireResist: 20, hypnotizeResist: 12 },
+            'Hell Protector': { dodgeRate: 5, meleeResist: 8, evilResist: 8, flashResist: 8, iceResist: 8, fireResist: 8, deathResist: 8, drainResist: 8, poisonResist: 8, chaosResist: 8, stunResist: 8, hypnotizeResist: 8, frailtyResist: 8 },
+            'Holy Dragon': { dodgeRate: 5, meleeResist: 10, evilResist: 10, flashResist: 10, iceResist: 10, fireResist: 10, chaosResist: 10 },
+            'Howling Beast': { dodgeRate: 10, meleeResist: 25, berserkRate: 10, berserkDamage: 10, comboRate: 15, comboHit: 3, counterAttackRate: 25, counterAttackDamage: 25 },
+            'Ice Demon': { dodgeRate: 5, evilResist: 18, flashResist: 18, iceResist: 18, fireResist: 18 },
+            'Iron Fang': { dodgeRate: 35, meleeResist: 50, chaosResist: 20 },
+            'Killer Bee': { dodgeRate: 5, meleeResist: 21, drainResist: 10, deathResist: 10, frailtyResist: 10 },
+            'Leopard Wolf': { dodgeRate: 5, meleeResist: 19, drainResist: 19, chaosResist: 19 },
+            'Lizard Bandit': { dodgeRate: 5, meleeResist: 7, evilResist: 7, flashResist: 7, iceResist: 7, fireResist: 7, stunResist: 20 },
+            'Lizard Man': { dodgeRate: 5, meleeResist: 7, evilResist: 7, flashResist: 7, iceResist: 7, fireResist: 7, stunResist: 20 },
+            'Lizard Miner': { dodgeRate: 5, meleeResist: 6, evilResist: 6, flashResist: 6, iceResist: 6, fireResist: 6, deathResist: 6, drainResist: 6, poisonResist: 6, chaosResist: 6, stunResist: 6, hypnotizeResist: 6, frailtyResist: 6 },
+            'Lycosa': { dodgeRate: 5, meleeResist: 8, poisonResist: 14, chaosResist: 14, stunResist: 14, hypnotizeResist: 14 },
+            'Mad Colossus': { dodgeRate: 5, meleeResist: 30, drainResist: 5, magicReflect: 30, magicReflectDamage: 30 },
+            'Mad Ogrewalker': { dodgeRate: 5, meleeResist: 18, poisonResist: 7, chaosResist: 7, stunResist: 7, hypnotizeResist: 7 },
+            'Mosquito': { dodgeRate: 5, meleeResist: 14, chaosResist: 16, stunResist: 16, hypnotizeResist: 16 },
+            'Mudraper': { dodgeRate: 5, meleeResist: 10, deathResist: 15, chaosResist: 11, stunResist: 11, hypnotizeResist: 11 },
+            'Mummy': { dodgeRate: 5, meleeResist: 30, deathResist: 30 },
+            'Nepenthes': { dodgeRate: 5, meleeResist: 6, evilResist: 7, flashResist: 7, iceResist: 7, fireResist: 7, deathResist: 7, chaosResist: 7, hypnotizeResist: 7 },
+            'Ocean Loong': { dodgeRate: 5, meleeResist: 20, evilResist: 40, flashResist: 40, fireResist: 40, iceResist: 40 },
+            'Ogrewalker': { dodgeRate: 5, meleeResist: 18, poisonResist: 13, chaosResist: 7, stunResist: 7, hypnotizeResist: 7 },
+            'Phoenix': { dodgeRate: 5, meleeResist: 12, evilResist: 11, fireResist: 20, hypnotizeResist: 12 },
+            'Pisces': { dodgeRate: 10, pierce: 5, pierceDamage: 5, criticalRate: 5, criticalDamage: 10, comboRate: 10, comboHit: 2, drainResist: 10, hypnotizeResist: 10, frailtyResist: 30 },
+            'River Beast': { dodgeRate: 5, meleeResist: 20, comboRate: 15, comboHit: 3, counterAttackRate: 15, counterAttackDamage: 15 },
+            'River Guardian': { dodgeRate: 5, meleeResist: 5, evilResist: 5, flashResist: 5, iceResist: 5, fireResist: 5, deathResist: 5, poisonResist: 5, chaosResist: 5, stunResist: 5, hypnotizeResist: 5, frailtyResist: 5, drainResist: 5 },
+            'Sand Colossus': { dodgeRate: 5, meleeResist: 50, defense: 10 },
+            'Sand Giant': { dodgeRate: 5, meleeResist: 60, deathResist: 25 },
+            'Santa Claus': { dodgeRate: 5, meleeResist: 30, drainResist: 25 },
+            'Santa Princess': { dodgeRate: 5, meleeResist: 20, stunResist: 40, hypnotizeResist: 10, frailtyResist: 5, chaosResist: 15 },
+            'Scarecrow': { dodgeRate: 5, meleeResist: 9, evilResist: 11, flashResist: 11, iceResist: 11, fireResist: 11, stunResist: 15 },
+            'Skeletal': { dodgeRate: 5, meleeResist: 12, evilResist: 15, iceResist: 15, fireResist: 15, deathResist: 9 },
+            'Snake Demon': { dodgeRate: 5, meleeResist: 9, evilResist: 14, iceResist: 14, deathResist: 15 },
+            'Snow Bear': { dodgeRate: 5, meleeResist: 20, chaosResist: 40, hypnotizeResist: 15, frailtyResist: 5, stunResist: 10 },
+            'Snow Wolf': { dodgeRate: 5, meleeResist: 20, drainResist: 10, poisonResist: 10, chaosResist: 10, stunResist: 10, hypnotizeResist: 10, frailtyResist: 10 },
+            'Snowie': { dodgeRate: 5, meleeResist: 20, poisonResist: 40, frailtyResist: 15, chaosResist: 5, hypnotizeResist: 10 },
+            'Spirit Cat': { dodgeRate: 5, meleeResist: 18, chaosResist: 35 },
+            'Stone Ghost': { dodgeRate: 30, meleeResist: 15, meleeReflect: 10, meleeReflectDamage: 10, magicReflect: 10, magicReflectDamage: 10, drainResist: 15, chaosResist: 20 },
+            'Stone Giant': { dodgeRate: 5, meleeResist: 30, drainResist: 15, deathResist: 14 },
+            'Stone Tortoise': { dodgeRate: 5, meleeResist: 30 },
+            'Teethor': { dodgeRate: 5, meleeResist: 12, evilResist: 12, flashResist: 12, iceResist: 12, fireResist: 12 },
+            'Thorn Spider': { dodgeRate: 5, meleeResist: 10, chaosResist: 30 },
+            'Tree Demon': { dodgeRate: 5, meleeResist: 14, evilResist: 20, iceResist: 20 },
+            'Werewolf': { dodgeRate: 5, meleeResist: 15, drainResist: 7, poisonResist: 7, chaosResist: 7, stunResist: 7, hypnotizeResist: 7, frailtyResist: 7 },
+            'Wicked Spirit': { dodgeRate: 5, meleeResist: 12, evilResist: 12, flashResist: 12, iceResist: 12, fireResist: 12, deathResist: 12, drainResist: 12 },
+            'Withered Guard': { dodgeRate: 5, meleeResist: 8, evilResist: 12, flashResist: 12, iceResist: 12, fireResist: 12, hypnotizeResist: 15 }
+        };
 
         let pets = [];
         let petIdCounter = 1;
@@ -798,7 +1141,7 @@
 
                 return `
                     <div class="pet-card">
-                        <button class="close-btn" onclick="removePet(${pet.id})" title="Remove Pet">✕</button>
+                        <button class="close-btn" onclick="removePet(${pet.id})" title="Remove Pet">âœ•</button>
                         
                         <!-- Pet dropdown with scroll arrows -->
                         <select class="pet-dropdown" id="pet-dropdown-${pet.id}" size="4" onchange="updatePet(${pet.id}, 'name', this.value)">
@@ -846,6 +1189,12 @@
                         <!-- Points display -->
                         <div class="points-display" style="color: ${avail >= 0 ? '#32CD32' : '#FF4444'}">${avail}</div>
 
+                        <!-- Info buttons for Resistance and Skills -->
+                        <div class="info-buttons">
+                            <button class="info-btn btn-resist" onclick="showResistance('${pet.name}')" title="Show Resistance"></button>
+                            <button class="info-btn btn-skill" onclick="showSkills('${pet.name}')" title="Show Skills"></button>
+                        </div>
+
                         <!-- Stat rows with buttons in correct order: input, minus, plus -->
                         <div class="stat-row stat-row-sta">
                             <input type="number" class="stat-input" value="${pet.staTotal}" min="${pet.level}" onchange="updatePet(${pet.id}, 'staTotal', parseInt(this.value))">
@@ -879,6 +1228,61 @@
                     </div>
                 `;
             }).join('');
+        }
+
+        function showResistance(petName) {
+            const resist = petResist[petName];
+            const modal = document.getElementById('infoModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+            
+            modalTitle.textContent = `${petName} - Resistance`;
+            
+            if (!resist) {
+                modalBody.innerHTML = '<div class="resist-item">No resistance data available</div>';
+            } else {
+                let html = '';
+                for (const [key, value] of Object.entries(resist)) {
+                    const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+                    html += `<div class="resist-item"><strong>${label}:</strong> ${value}</div>`;
+                }
+                modalBody.innerHTML = html;
+            }
+            
+            modal.style.display = 'block';
+        }
+
+        function showSkills(petName) {
+            const skills = petSkills[petName];
+            const modal = document.getElementById('infoModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+            
+            modalTitle.textContent = `${petName} - Skills`;
+            
+            if (!skills) {
+                modalBody.innerHTML = '<div class="skill-item">No skill data available</div>';
+            } else {
+                let html = '';
+                skills.forEach((skill, index) => {
+                    html += `<div class="skill-item">${index + 1}. ${skill}</div>`;
+                });
+                modalBody.innerHTML = html;
+            }
+            
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('infoModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('infoModal');
+            if (event.target === modal) {
+                closeModal();
+            }
         }
 
         render();
