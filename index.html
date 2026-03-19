@@ -1260,9 +1260,14 @@
                                 <input type="checkbox" ${pet.dragonEye ? 'checked' : ''} onchange="updatePet(${pet.id}, 'dragonEye', this.checked)">
                                 <span>DE</span>
                             </div>
-                            <div class="bonus-input">
-                                <span>DB:</span>
-                                <input type="number" value="${pet.dragonBone}" min="0" max="4" onchange="updatePet(${pet.id}, 'dragonBone', parseInt(this.value))">
+                            <div class="bonus-check">
+                                <select onchange="updatePet(${pet.id}, 'dragonBone', parseInt(this.value))" style="background:#222;color:#ffd700;border:1px solid #555;border-radius:3px;padding:1px 2px;font-size:11px;">
+                                    <option value="0" ${pet.dragonBone === 0 ? 'selected' : ''}>DB0</option>
+                                    <option value="1" ${pet.dragonBone === 1 ? 'selected' : ''}>DB1</option>
+                                    <option value="2" ${pet.dragonBone === 2 ? 'selected' : ''}>DB2</option>
+                                    <option value="3" ${pet.dragonBone === 3 ? 'selected' : ''}>DB3</option>
+                                    <option value="4" ${pet.dragonBone === 4 ? 'selected' : ''}>DB4</option>
+                                </select>
                             </div>
                         </div>
                         ${effectiveGR !== pet.gr ? `<div class="gr-effective">GR: ${effectiveGR.toFixed(3)}</div>` : ''}
