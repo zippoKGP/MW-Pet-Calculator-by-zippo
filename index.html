@@ -603,7 +603,12 @@
             "Tree Demon": "https://mythwar.luigi311.com/latest/assets/monsters/tree_demon.gif",
             "Werewolf": "https://mythwar.luigi311.com/latest/assets/monsters/werewolf.gif",
             "Wicked Spirit": "https://mythwar.luigi311.com/latest/assets/monsters/wicked_spirit.gif",
-            "Withered Guard": "https://mythwar.luigi311.com/latest/assets/monsters/withered_guard.gif"
+            "Withered Guard": "https://mythwar.luigi311.com/latest/assets/monsters/withered_guard.gif",
+            "Centaur Queen": "https://mythwar.luigi311.com/latest/assets/monsters/centaur_queen.gif",
+            "Poison Grub": "https://mythwar.luigi311.com/latest/assets/monsters/poison_grub.gif",
+            "Howling Fish": "https://mythwar.luigi311.com/latest/assets/monsters/howling_fish.gif",
+            "Stank Foot": "https://mythwar.luigi311.com/latest/assets/monsters/stank_foot.gif",
+            "Frost Worm": "https://mythwar.luigi311.com/latest/assets/monsters/frost_worm.gif"
         };
         const petSpecies = {
   "Ant Eater": "Special",
@@ -714,13 +719,16 @@
   "Velvet Viper": "Demon",
   "Lumin": "Special",
   "Umbra": "Special",
-  "Searing Wing": "Flying",
+  "Searing Wing": "Special",
   "Flame Cerberus": "Demon",
   "Grassthrasher": "Flying",
-  "Stank Foot": "Special",
-  "Frost Worm": "Special",
+  "Stank Foot": "Undead",
+  "Frost Worm": "Flying",
   "Wicked Spirit": "Undead",
-  "Withered Guard": "Undead"
+  "Withered Guard": "Undead",
+  "Centaur Queen": "Human",
+  "Poison Grub": "Undead",
+  "Howling Fish": "Flying"
 };
 
         const petData = [
@@ -835,10 +843,13 @@
     { name: 'Searing Wing', sta: 645, int: 152, str: 18, agi: 269, grMin: 1.349, grMax: 1.379 },
     { name: 'Flame Cerberus', sta: 645, int: 152, str: 18, agi: 269, grMin: 1.349, grMax: 1.379 },
     { name: 'Grassthrasher', sta: 271, int: 123, str: 30, agi: 131, grMin: 1.25, grMax: 1.3 },
-    { name: 'Stank Foot', sta: 271, int: 123, str: 30, agi: 131, grMin: 1.25, grMax: 1.3 },
-    { name: 'Frost Worm', sta: 271, int: 123, str: 30, agi: 131, grMin: 1.25, grMax: 1.3 },
+    { name: 'Stank Foot', sta: 190, int: 187, str: 36, agi: 261, grMin: 1.25, grMax: 1.3 },
+    { name: 'Frost Worm', sta: 190, int: 117, str: 66, agi: 269, grMin: 1.25, grMax: 1.3 },
     { name: 'Wicked Spirit', sta: 86, int: 399, str: 16, agi: 152, grMin: 1.15, grMax: 1.2 },
-    { name: 'Withered Guard', sta: 85, int: 110, str: 18, agi: 54, grMin: 1.1, grMax: 1.15 }
+    { name: 'Withered Guard', sta: 85, int: 110, str: 18, agi: 54, grMin: 1.1, grMax: 1.15 },
+    { name: 'Centaur Queen', sta: 154, int: 155, str: 84, agi: 215, grMin: 1.2, grMax: 1.3 },
+    { name: 'Poison Grub', sta: 126, int: 98, str: 108, agi: 94, grMin: 1.2, grMax: 1.3 },
+    { name: 'Howling Fish', sta: 94, int: 161, str: 18, agi: 145, grMin: 1.1, grMax: 1.15 }
 ];
 
         // Pet Skills Data
@@ -858,9 +869,9 @@
             'Capilla': ['EvilI', 'EvilII', 'EvilIII', 'EvilIV'],
             'Capricornus': ['FireI', 'FireII', 'FireIII', 'FireIV'],
             'Centaur King': ['MultiShotI', 'MultiShotII', 'MultiShotIII', 'MultiShotIV'],
-            'Chaos Devil': ['FireI', 'IceII', 'EvilIII', 'FlashIV'],
+            'Chaos Devil': ['EnhanceI', 'EnhanceII', 'EnhanceIII', 'EnhanceIV'],
             'Chaos Wisp': ['IceII', 'EvilII', 'IceIV', 'FlashIV'],
-            'Chaotic Devil': ['BlizzardI', 'SpeedII', 'BlizzardIII', 'SpeedIV'],
+            'Chaotic Devil': ['SpeedI', 'SpeedII', 'SpeedIII', 'SpeedIV'],
             'Chinchilla Fire': ['FireI', 'FireII', 'FireIII', 'FireIV'],
             'Chinchilla Ice': ['IceI', 'IceII', 'IceIII', 'IceIV'],
             'Crazy Bandit': ['FireI', 'FireII', 'FireIII', 'FireIV'],
@@ -948,16 +959,19 @@
             'Thorn Spider': ['PoisonI', 'PoisonII', 'PoisonIII', 'PoisonIV'],
             'Tree Demon': ['FlashI', 'FlashII', 'FlashIII', 'FlashIV'],
             'Werewolf': ['EvilI', 'EvilII', 'EvilIII', 'EvilIV'],
-            'Velvet Viper': ['DrainI', 'DrainII', 'FlashIII', 'FlashIV'],
+            'Velvet Viper': ['EvilII', 'EvilIV', 'HealOtherI', 'HealOtherIII'],
             'Lumin': ['DrainI', 'DrainII', 'DrainIII', 'DrainIV'],
             'Umbra': ['DrainI', 'DrainII', 'DrainIII', 'DrainIV'],
             'Searing Wing': ['DrainI', 'DrainII', 'DrainIII', 'DrainIV'],
             'Flame Cerberus': ['DrainI', 'DrainII', 'DrainIII', 'DrainIV'],
-            'Grassthrasher': ['ProtectI', 'ProtectII', 'ProtectIII', 'ProtectIV'],
-            'Stank Foot': ['ProtectI', 'ProtectII', 'ProtectIII', 'ProtectIV'],
-            'Frost Worm': ['ProtectI', 'ProtectII', 'ProtectIII', 'ProtectIV'],
+            'Grassthrasher': ['ProtectI', 'ProtectIII', 'ProtectIII', 'ProtectIV'],
+            'Stank Foot': ['FrailtyI', 'FrailtyII', 'FrailtyIII', 'FrailtyIV'],
+            'Frost Worm': ['ProtectI', 'ProtectIII', 'ProtectIII', 'ProtectIV'],
             'Wicked Spirit': ['FlashI', 'FlashII', 'FlashIII', 'FlashIV'],
-            'Withered Guard': ['EvilI', 'EvilII', 'EvilIII', 'EvilIV']
+            'Withered Guard': ['EvilI', 'EvilII', 'EvilIII', 'EvilIV'],
+            'Centaur Queen': ['BlizzardI', 'BlizzardII', 'BlizzardIII', 'BlizzardIV'],
+            'Poison Grub': ['PoisonI', 'PoisonII', 'PoisonIII', 'PoisonIV'],
+            'Howling Fish': ['FrailtyI', 'FrailtyII', 'FrailtyIII', 'FrailtyIV']
         };
 
         // Pet Resistance Data
@@ -973,7 +987,7 @@
             'Big Foot': { dodgeRate: 5, meleeResist: 32, drainResist: 15, chaosResist: 5, stunResist: 5, hypnotizeResist: 5 },
             'Bloodpede': { dodgeRate: 5, meleeResist: 12, poisonResist: 35, frailtyResist: 20 },
             'Bloodpede (Rare)': { dodgeRate: 5, meleeResist: 12, poisonResist: 35, frailtyResist: 20 },
-            'Bog Nightmare': { dodgeRate: 5, meleeResist: 6, deathResist: 6, flashResist: 6, iceResist: 6, fireResist: 6, drainResist: 6, poisonResist: 6, chaosResist: 6, stunResist: 6, hypnotizeResist: 6, frailtyResist: 6 },
+            'Bog Nightmare': { dodgeRate: 5, meleeResist: 6, deathResist: 6, evilResist: 6, flashResist: 6, iceResist: 6, fireResist: 6, drainResist: 6, poisonResist: 6, chaosResist: 6, stunResist: 6, hypnotizeResist: 6, frailtyResist: 6 },
             'Capilla': { dodgeRate: 5, meleeResist: 9, chaosResist: 12, stunResist: 12, hypnotizeResist: 12, frailtyResist: 12 },
             'Capricornus': { dodgeRate: 10, meleeResist: 20, pierce: 5, pierceDamage: 5, berserkRate: 10, berserkDamage: 10, counterAttackRate: 15, counterAttackDamage: 5, drainResist: 10, chaosResist: 20 },
             'Centaur King': { dodgeRate: 5, meleeResist: 15, criticalRate: 5, criticalDamage: 5, evilResist: 15, flashResist: 15, iceResist: 15, fireResist: 15 },
@@ -982,7 +996,7 @@
             'Chaotic Devil': { dodgeRate: 5, meleeResist: 35, evilResist: 5, flashResist: 5, iceResist: 5, fireResist: 5, drainResist: 5, deathResist: 5, poisonResist: 5, chaosResist: 5, stunResist: 5, hypnotizeResist: 5, frailtyResist: 5 },
             'Chinchilla Fire': { dodgeRate: 15, meleeResist: 10, drainResist: 15, chaosResist: 30, stunResist: 10 },
             'Chinchilla Ice': { dodgeRate: 15, meleeResist: 10, drainResist: 15, chaosResist: 10, stunResist: 30 },
-            'Crazy Bandit': { dodgeRate: 5, meleeResist: 17, deathResist: 10, drainResist: 8, chaosResist: 10, stunResist: 5, hypnotizeResist: 5, frailtyResist: 5 },
+            'Crazy Bandit': { dodgeRate: 5, meleeResist: 17, fireResist: 8, drainResist: 10, poisonResist: 10, chaosResist: 5, stunResist: 5, hypnotizeResist: 5, frailtyResist: 10 },
             'Crazy Guard': { dodgeRate: 5, meleeResist: 18, deathResist: 3, evilResist: 3, flashResist: 3, iceResist: 3, fireResist: 3, drainResist: 3, poisonResist: 3, chaosResist: 3, stunResist: 3, hypnotizeResist: 3, frailtyResist: 3 },
             'Cyclops': { dodgeRate: 5, meleeResist: 25, counterAttackRate: 15, counterAttackDamage: 5, comboRate: 15, comboHit: 5, chaosResist: 25 },
             'Dark Dream': { hitRate: 120, dodgeRate: 40, meleeResist: 30 },
@@ -999,7 +1013,7 @@
             'Evil Slicer': { dodgeRate: 5, meleeResist: 12, evilResist: 15, flashResist: 4, iceResist: 4, fireResist: 4, poisonResist: 3, chaosResist: 3, stunResist: 3, hypnotizeResist: 3, frailtyResist: 3, drainResist: 3 },
             'Evil Wolf': { dodgeRate: 5, meleeResist: 28, deathResist: 10, evilResist: 10, flashResist: 10, chaosResist: 10, stunResist: 10, hypnotizeResist: 10 },
             'Eyekicker': { dodgeRate: 5, meleeResist: 25, berserkRate: 5, berserkDamage: 10, counterAttackRate: 10, counterAttackDamage: 3, drainResist: 5 },
-            'Felsworn': { dodgeRate: 5, meleeResist: 15, deathResist: 10, flashResist: 10, iceResist: 10, fireResist: 10, drainResist: 10, poisonResist: 10, chaosResist: 10, stunResist: 10, hypnotizeResist: 10, frailtyResist: 10 },
+            'Felsworn': { dodgeRate: 5, meleeResist: 15, deathResist: 10, evilResist: 10, flashResist: 10, iceResist: 10, fireResist: 10, drainResist: 10, poisonResist: 10, chaosResist: 10, stunResist: 10, hypnotizeResist: 10, frailtyResist: 10 },
             'Feral Wolf': { dodgeRate: 5, meleeResist: 28, pierce: 10, pierceDamage: 10, berserkRate: 5, berserkDamage: 10, chaosResist: 10, stunResist: 10, hypnotizeResist: 10 },
             'Fire Demon': { dodgeRate: 5, meleeResist: 20, deathResist: 15, evilResist: 15, flashResist: 15, iceResist: 15, fireResist: 20 },
             'Fire Feather': { dodgeRate: 5, meleeResist: 10, evilResist: 15, flashResist: 15, iceResist: 15, fireResist: 15, chaosResist: 15 },
@@ -1018,14 +1032,14 @@
             'Glimmer Fish': { dodgeRate: 5, meleeResist: 10, evilResist: 12, flashResist: 12, iceResist: 12, fireResist: 12 },
             'Glitter Tiger': { hitRate: 140, dodgeRate: 20, berserkRate: 10, berserkDamage: 10, comboRate: 10, comboHit: 3, counterAttackDamage: 10, counterAttackRate: 10 },
             'Greater Wolf': { dodgeRate: 5, meleeResist: 20, pierce: 20, pierceDamage: 20, comboRate: 7, comboHit: 3 },
-            'Guard': { dodgeRate: 5, meleeResist: 18, deathResist: 5, flashResist: 5, iceResist: 5, fireResist: 5, drainResist: 5, poisonResist: 5, chaosResist: 5, stunResist: 5, hypnotizeResist: 5, frailtyResist: 5 },
+            'Guard': { dodgeRate: 5, meleeResist: 18, deathResist: 5, evilResist: 5, flashResist: 5, iceResist: 5, fireResist: 5, drainResist: 5, poisonResist: 5, chaosResist: 5, stunResist: 5, hypnotizeResist: 5, frailtyResist: 5 },
             'Hell Cat': { dodgeRate: 5, meleeResist: 14, evilResist: 10, flashResist: 10, iceResist: 10, fireResist: 10 },
             'Hell Devil': { dodgeRate: 5, evilResist: 15, iceResist: 35, drainResist: 22 },
             'Hell Gardener': { hitRate: 120, dodgeRate: 10, meleeResist: 25, berserkRate: 5, berserkDamage: 10, comboRate: 5, comboHit: 2, counterAttackRate: 5, counterAttackDamage: 10, evilResist: 8, flashResist: 8, iceResist: 8, fireResist: 8, deathResist: 8, drainResist: 8, poisonResist: 5, chaosResist: 5, stunResist: 5, hypnotizeResist: 5, frailtyResist: 5 },
             'Hell Protector': { dodgeRate: 5, meleeResist: 30, drainResist: 20 },
             'Holy Dragon': { dodgeRate: 5, meleeResist: 10, evilResist: 10, flashResist: 10, iceResist: 10, fireResist: 10, chaosResist: 10 },
             'Howling Beast': { dodgeRate: 10, meleeResist: 25, berserkRate: 10, berserkDamage: 10, comboRate: 15, comboHit: 3, counterAttackRate: 25, counterAttackDamage: 25 },
-            'Ice Demon': { dodgeRate: 5, flashResist: 18, iceResist: 18, fireResist: 18, drainResist: 18 },
+            'Ice Demon': { dodgeRate: 5, evilResist: 18, flashResist: 18, iceResist: 18, fireResist: 18 },
             'Iron Fang': { dodgeRate: 35, meleeResist: 50, chaosResist: 20 },
             'Killer Bee': { dodgeRate: 5, meleeResist: 21, berserkRate: 5, berserkDamage: 5, comboRate: 10, comboHit: 3, deathResist: 10, drainResist: 10, frailtyResist: 10 },
             'Lapis Colossal': { meleeResist: 30, magicReflect: 30, magicReflectDamage: 30, drainResist: 5 },
@@ -1037,7 +1051,7 @@
             'Mad Ogrewalker': { dodgeRate: 5, meleeResist: 18, poisonResist: 7, chaosResist: 7, stunResist: 7, hypnotizeResist: 7 },
             'Mosquito': { dodgeRate: 5, meleeResist: 14, chaosResist: 16, stunResist: 16, hypnotizeResist: 16 },
             'Moss Spirit': { dodgeRate: 5, meleeResist: 20, drainResist: 30 },
-            'Mudraper': { dodgeRate: 5, meleeResist: 10, poisonResist: 15, stunResist: 11, hypnotizeResist: 11, frailtyResist: 11 },
+            'Mudraper': { dodgeRate: 5, meleeResist: 10, deathResist: 15, chaosResist: 11, stunResist: 11, hypnotizeResist: 11 },
             'Mummy': { dodgeRate: 5, meleeResist: 30, meleeReflect: 5, meleeReflectDamage: 5, magicReflect: 5, magicReflectDamage: 5, drainResist: 30 },
             'Nepenthes': { dodgeRate: 5, meleeResist: 6, deathResist: 7, evilResist: 7, flashResist: 7, iceResist: 7, fireResist: 7, chaosResist: 7, hypnotizeResist: 7 },
             'Ocean Loong': { dodgeRate: 5, meleeResist: 20, evilResist: 40, flashResist: 40, fireResist: 40, iceResist: 40 },
@@ -1066,17 +1080,20 @@
             'Teethor': { dodgeRate: 5, meleeResist: 12, evilResist: 12, flashResist: 12, iceResist: 12, fireResist: 12 },
             'Thorn Spider': { dodgeRate: 5, meleeResist: 8, poisonResist: 14, chaosResist: 14, stunResist: 14, hypnotizeResist: 14 },
             'Tree Demon': { dodgeRate: 5, meleeResist: 14, evilResist: 20, flashResist: 20, iceResist: 20, fireResist: 20 },
-            'Werewolf': { dodgeRate: 5, meleeResist: 15, deathResist: 7, chaosResist: 7, stunResist: 7, hypnotizeResist: 7, frailtyResist: 7 },
+            'Werewolf': { dodgeRate: 5, meleeResist: 15, drainResist: 7, poisonResist: 7, chaosResist: 7, stunResist: 7, hypnotizeResist: 7, frailtyResist: 7 },
             'Wicked Spirit': { dodgeRate: 5, meleeResist: 20, deathResist: 15, evilResist: 15, iceResist: 15, fireResist: 15 },
             'Withered Guard': { dodgeRate: 5, meleeResist: 8, evilResist: 12, flashResist: 12, iceResist: 12, fireResist: 12, hypnotizeResist: 15 },
-            'Velvet Viper': { dodgeRate: 5, meleeResist: 10, evilResist: 20, flashResist: 20, iceResist: 20, fireResist: 20 },
+            'Velvet Viper': { dodgeRate: 5, drainResist: 10, evilResist: 20, flashResist: 20, iceResist: 20, fireResist: 20 },
             'Lumin': { dodgeRate: 35, meleeResist: 50, chaosResist: 20 },
             'Umbra': { dodgeRate: 35, meleeResist: 50, chaosResist: 20 },
             'Searing Wing': { dodgeRate: 35, meleeResist: 50, chaosResist: 20 },
             'Flame Cerberus': { dodgeRate: 35, meleeResist: 50, chaosResist: 20 },
             'Grassthrasher': { dodgeRate: 5, meleeResist: 15, deathResist: 30, evilResist: 30, flashResist: 30, iceResist: 30, fireResist: 30, drainResist: 10, poisonResist: 15 },
-            'Stank Foot': { dodgeRate: 5, meleeResist: 15, deathResist: 30, evilResist: 30, flashResist: 30, iceResist: 30, fireResist: 30, drainResist: 10, poisonResist: 15 },
-            'Frost Worm': { dodgeRate: 5, meleeResist: 15, deathResist: 30, evilResist: 30, flashResist: 30, iceResist: 30, fireResist: 30, drainResist: 10, poisonResist: 15 }
+            'Stank Foot': { meleeResist: 22, drainResist: 22, chaosResist: 15 },
+            'Frost Worm': { dodgeRate: 15, hitRate: 115, comboRate: 15, comboHit: 3 },
+            'Centaur Queen': { dodgeRate: 5, meleeResist: 15, criticalRate: 5, criticalDamage: 5, evilResist: 15, flashResist: 15, iceResist: 15, fireResist: 15 },
+            'Poison Grub': { dodgeRate: 5, hitRate: 110, berserkRate: 5, berserkDamage: 15 },
+            'Howling Fish': { dodgeRate: 5, meleeResist: 10, evilResist: 12, flashResist: 12, iceResist: 12, fireResist: 12 }
         };
 
 
