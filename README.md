@@ -4,6 +4,7 @@
 - **Stat changes:** 58 pets
 - **Skill changes:** 27 pets (actual changes)
 - **Resistance changes:** 60 pets
+- **Added dropdown for the dbones**
 
 ---
 
